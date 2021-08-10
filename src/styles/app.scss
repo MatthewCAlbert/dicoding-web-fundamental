@@ -1,36 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-$custom-colors: (
-  "primary": #be501d,
-  "danger": #c62e58,
-  "yellow": #f8be37,
-  "violet": #464156,
-  "black": #122230,
-);
-
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/spinners";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/close";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/utilities/api";
-
 @import "variables";
-
 * {
   box-sizing: border-box;
   font-family: "Open Sans", "Roboto", sans-serif;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+@import "layouts";

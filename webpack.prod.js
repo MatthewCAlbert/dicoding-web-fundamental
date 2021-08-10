@@ -26,6 +26,7 @@ module.exports = merge(common, {
   optimization: {
     moduleIds: "deterministic",
     splitChunks: {
+      chunks: "all",
       cacheGroups: {
         vendor: {
           name: "node_vendors",

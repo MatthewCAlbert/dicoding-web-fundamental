@@ -4,9 +4,11 @@
 > Keep your notes on the cloud
 
 ## Using
-- Webpack
+- Webpack 5
+- Navigo SPA Router
 - jQuery
 - Axios
+- Bootstrap 5.1
 - ESLint
 - SASS CSS Preprocessor
 

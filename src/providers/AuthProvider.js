@@ -17,7 +17,7 @@ class AuthProvider {
     try {
       return JSON.parse(localStorage.getItem(this.storageKey));
     } catch (e) {
-      return {};
+      return null;
     }
   };
 }
