@@ -4,6 +4,10 @@
   "description": "",
   "dependencies": {
     "@babel/runtime": "^7.14.8",
+    "@popperjs/core": "^2.9.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0",
     "nanoid": "^3.1.23",
     "uglify-js": "^3.14.1"
   },
@@ -11,6 +15,7 @@
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",

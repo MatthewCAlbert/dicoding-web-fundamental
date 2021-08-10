@@ -1,0 +1,14 @@
+$max-content-width: 1700px;
+
+$breakpoint-xs: 575px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+@mixin breakpoint-min($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}

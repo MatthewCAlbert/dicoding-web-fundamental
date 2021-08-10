@@ -1,2 +1,6 @@
+import "bootstrap";
+
 import "./styles/app.scss";
-import item from "./components/item";
+import "./components/Modal";
+import "./components/LoginModal";
+import "./components/RegisterModal";
