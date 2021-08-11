@@ -1,3 +1,4 @@
+import "regenerator-runtime";
 import "bootstrap";
 
 import "./styles/deps.scss";

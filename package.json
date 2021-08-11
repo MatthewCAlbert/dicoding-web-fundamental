@@ -8,9 +8,11 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
     "dayjs": "^1.10.6",
+    "http-server": "^13.0.0",
     "jquery": "^3.6.0",
     "nanoid": "^3.1.23",
     "navigo": "^8.11.1",
+    "regenerator-runtime": "^0.13.9",
     "uglify-js": "^3.14.1"
   },
   "devDependencies": {
@@ -39,7 +41,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "start": "http-server ./dist",
+    "start": "http-server ./dist --proxy http://localhost:8080?",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
