@@ -13,6 +13,30 @@
 main {
   @include getCurrentHeaderHeight(padding-top);
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+section.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &.section-normalized {
+    .section-inner {
+      width: 100%;
+      max-width: $max-content-width;
+      @include getXSafePad(padding, 20px);
+    }
+  }
+  &.section-mfh {
+    min-height: 90vh;
+  }
+}
+
+footer {
+  font-size: 0.9rem;
 }
 
 nav {
@@ -138,11 +162,15 @@ footer {
   }
 }
 
+.toast-container {
+  z-index: 9000;
+}
+
 .loading-screen {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100vw;
   height: 100%;

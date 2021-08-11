@@ -4,6 +4,7 @@ import ApiProvider from "../providers/ApiProvider";
 import AuthProvider from "../providers/AuthProvider";
 import { loginService } from "../services/AuthService";
 import { Modal } from "bootstrap";
+import { setLoading, toast } from "../utils/utils";
 
 class LoginModal extends HTMLElement {
   constructor() {
@@ -23,7 +24,9 @@ class LoginModal extends HTMLElement {
   async onSubmitLogin() {
     const username = $(this).find("input[name=username]").val();
     const password = $(this).find("input[name=password]").val();
-    if (!username || !password) return alert("Please input required fields");
+    if (!username || !password)
+      return toast.warning("Please input required fields");
+    setLoading(true);
     try {
       const { token, data: user } = await loginService(
         ApiProvider(),
@@ -31,11 +34,13 @@ class LoginModal extends HTMLElement {
         password
       );
       AuthProvider.login(user, token);
+      toast.success("Login Success");
       this.getModal().hide();
+      window.location.reload();
     } catch (error) {
-      console.log(error);
-      alert("Login failed");
+      toast.error("Login Failed");
     }
+    setLoading(false);
   }
 
   modalContent() {
@@ -44,11 +49,11 @@ class LoginModal extends HTMLElement {
         <form id="${this._formId}">
           <div class="mb-3">
             <label for="${this._formId}-login-username">Username</label>
-            <input id="${this._formId}-login-username" type="text" class="form-control" name="username" required />
+            <input id="${this._formId}-login-username" type="text" class="form-control" name="username" autocomplete="off" required />
           </div>
           <div>
             <label for="${this._formId}-login-password">Password</label>
-            <input id="${this._formId}-login-password" type="password" class="form-control" name="password" required />
+            <input id="${this._formId}-login-password" type="password" class="form-control" name="password" autocomplete="off" required />
           </div>
         </form>
       </div>

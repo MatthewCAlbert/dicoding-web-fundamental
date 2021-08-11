@@ -25,5 +25,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/utilities/api";

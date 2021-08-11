@@ -24,7 +24,7 @@ class Header extends HTMLElement {
     if (this._userData !== null) {
       // isLoggedIn
       return `
-        <li><a>${this._userData?.username}</a></li>
+        <li><a href="/account" data-navigo>${this._userData?.username}</a></li>
         <li><a id="${this._logoutBtnId}">Logout</a></li>
       `;
     } else {

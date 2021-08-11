@@ -17,13 +17,15 @@ class Layout extends HTMLElement {
       <main>
         ${this._content}
       </main>
-      <footer>
+      <footer class="d-flex justify-content-center">
         <div class="footer-inner d-flex justify-content-center">
           <div>
             Matthew Christopher Albert @ ${new Date().getFullYear()}
           </div>
         </div>
       </footer>
+      
+      <div class="toast-container position-fixed bottom-0 mb-5 start-50 translate-middle-x"></div>
       <loading-screen></loading-screen>
       <login-modal></login-modal>
       <register-modal></register-modal>

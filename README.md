@@ -3,6 +3,14 @@
 ## Info
 > Keep your notes on the cloud
 
+## Feature
+- Login and Register Account
+- Change Password
+- Add, Delete, and Edit Your Notes
+
+## Warning
+- No refresh token, if error unauthorized please relogin.
+
 ## Using
 - Webpack 5
 - Navigo SPA Router
@@ -10,6 +18,7 @@
 - Axios
 - Bootstrap 5.1
 - ESLint
+- Dayjs (Momentjs Alternative)
 - SASS CSS Preprocessor
 
 ## API Information

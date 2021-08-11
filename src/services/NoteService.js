@@ -6,7 +6,7 @@ export const createNoteService = async (instance, title, content) => {
   return data;
 };
 
-export const fetchAllNotesService = async (instance) => {
+export const fetchAllNotesService = (instance) => {
   const fetcher = async () => {
     const response = await instance.get("notes/all");
     if (response) return response;
@@ -15,10 +15,10 @@ export const fetchAllNotesService = async (instance) => {
   return fetcher;
 };
 
-export const fetchNoteService = async (instance, id) => {
+export const fetchNoteService = (instance, id) => {
   const fetcher = async () => {
-    const response = await instance.get(`notes/${id}`);
-    if (response) return response;
+    const { data } = await instance.get(`notes/${id}`);
+    if (data) return data;
   };
 
   return fetcher;

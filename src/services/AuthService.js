@@ -19,9 +19,10 @@ export const changePasswordService = async (
   oldPassword,
   newPassword
 ) => {
-  const { data } = await instance.post("users/change-password", {
+  const { data } = await instance.put("users/change-password", {
     oldPassword,
     newPassword,
+    rePassword: newPassword,
   });
   return data;
 };

@@ -12,7 +12,7 @@ const ApiProvider = () => {
 
   axiosInstance.interceptors.request.use((config) => {
     const currentToken = localStorage.getItem(storageKey) || "";
-    config.headers.common["Authorization"] = `Bearer ${currentToken}`;
+    config.headers.common["Authorization"] = `${currentToken}`;
     config.headers.common["Access-Control-Allow-Origin"] = "*";
 
     return config;
