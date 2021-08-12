@@ -2,12 +2,12 @@ import dayjs from "dayjs";
 import $ from "jquery";
 import { nanoid } from "nanoid";
 
-export function setLoading(status = true) {
+export const setLoading = (status = true) => {
   if (status) $("#loadingScreen").addClass("active");
   else $("#loadingScreen").removeClass("active");
-}
+};
 
-export function setTitle(title = "", useSuffix = true) {
+export const setTitle = (title = "", useSuffix = true) => {
   let t = "Dicoding Notes";
   if (title === "") {
     document.title = t;
@@ -16,11 +16,11 @@ export function setTitle(title = "", useSuffix = true) {
   } else {
     document.title = title;
   }
-}
+};
 
-export function dayJsWrapped(x) {
+export const dayJsWrapped = (x) => {
   return dayjs(x).subtract(7, "h");
-}
+};
 
 export const toast = {
   template: (message, theme = "primary") => {

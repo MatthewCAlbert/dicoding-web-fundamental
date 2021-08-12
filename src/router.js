@@ -8,27 +8,27 @@ const root = document.querySelector("#root");
 // const main = document.querySelector("#root main");
 const router = new Navigo("/");
 
-function renderWithLayout(html) {
+const renderWithLayout = (html) => {
   root.innerHTML = `<app-layout>${html}</app-layout>`;
-}
+};
 
-router.on("/", function () {
+router.on("/", () => {
   const page = new IndexPage();
   renderWithLayout(page.render());
 });
 
-router.on("/account", function () {
+router.on("/account", () => {
   const page = new AccountPage();
   renderWithLayout(page.render());
 });
 
-router.on("/note/:id", function ({ data }) {
+router.on("/note/:id", ({ data }) => {
   const id = data.id;
   const page = new NotePage(id);
   renderWithLayout(page.render());
 });
 
-router.on("/*", function () {
+router.on("/*", () => {
   const page = new Page404();
   root.innerHTML = page.render();
 });

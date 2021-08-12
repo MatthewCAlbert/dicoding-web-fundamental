@@ -33,7 +33,7 @@ class NoteList extends HTMLElement {
       const id = res?.data?._id;
       window.location.replace(`/note/${id}`);
     } catch (error) {
-      //
+      toast.error("Note Creation Failed!");
     }
     setLoading(false);
   }
